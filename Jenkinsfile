@@ -1,5 +1,10 @@
 pipeline {
-    agent { label 'java8', 'Maven 3.3.9' } 
+    agent { label 'java8' } 
+
+    tools {
+        maven 'apache-maven-3.3.9'
+    }
+    
     stages {
         stage ('Initialize') {
             steps {
