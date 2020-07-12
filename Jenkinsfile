@@ -1,10 +1,7 @@
 pipeline {
-    agent any 
-
-    tools { 
-        maven '3-openjdk-8' 
-        jdk 'jdk8' 
-    }
+    agent {
+        docker { image 'maven:3.6.2' }
+    } 
 
     stages {
         stage ('Initialize') {
