@@ -1,8 +1,8 @@
 pipeline {
-    agent { label 'java8' } 
+    agent any 
 
     tools { 
-        maven 'Maven 3.3.9' 
+        maven '3-openjdk-8' 
         jdk 'jdk8' 
     }
 
